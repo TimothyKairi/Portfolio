@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- header -->
+    <div id="header">
+        <div class="container">
+          <nav>
+            <img src="images/LogoT.png" class="logo">
+            <ul>
+                <li><b><a href="#">Home</a></b></li>
+                <li><b><a href="#">About</a></b></li>
+                <li><b><a href="#">Services</a></b></li>
+                <li><b><a href="#">Portfolio</a></b></li>
+                <li><b><a href="#">Contact</a></b></li>
+                <li><b><a href="#">FAQs</a></b></li>
+            </ul>
+          </nav>
+          <div class="header-text">
+            <p>WEB/APP Developer</p>
+            <h1>Hi, I'm <span>Timothy</span><br> From Kenya</h1>
+
+          </div>
+        </div>
+    </div>
+<!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"><img src="images/user.png" alt=""></div>
+                <div class="about-col-2"><h1 class="sub-title">About Me</h1>
+                     <p>I'm Timothy kairi, a curious mind fueled by technology and creativity.
+                  I specialize in turning ideas into functional digital solutions, whether it's building sleek web apps,
+                  solving complex coding challenges, or exploring the next big thing in tech.
+                  I'm driven, adaptable, and ready to bring both creativity and technical precision to any team that's shaping the future of tech.</p>
+                  <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                  </div>
+                   <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing websites and mobile apps</li>
+                        <li><span>Cyber Security</span><br>Safeguarding softwares</li>
+                        <li><span>Data Science</span><br>Interprating and analyzing data effiently</li>
+                        <li><span>App development</span><br>Building Android/IOS apps</li>
+
+
+                    </ul>
+                  </div>
+                  <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024 - Current</span><br>Own my software company. I also develop apps and webs</li>
+                        <li><span>2023 - 2024</span><br>Data Analyst at IBM and also director of ARGUS</li>
+                        <li><span>2022 - 2023</span><br>Frontend Developer at Microsoft company on a 1yr contract</li>
+                        <li><span>2020 - 2021</span><br>Software Engineering Intern at Google</li>
+
+
+                    </ul>
+                  </div>
+                   <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2025</span><br>WEB/APP development traiining at Modcom institute</li>
+                        <li><span>2021 - 2024</span><br>Bachelor of computer science at Oxford University</li>
+                        <li><span>2022</span><br>Meta Front-End Developer Certification at MIT</li>
+                        <li><span>2023</span><br>AWS Academy Graduate at Cloud Foundations</li>
+
+
+                    </ul>
+                  </div>
+                  
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- services -->
+     <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <h2>Web Design</h2>
+            <p>I create clean, responsive, and user-friendly websites that don't just look good,
+              they perform. Every design is built with your brand in mind, optimized for speed and mobile-ready.</p>
+              <a href="">Learn more...</a>
+          </div>
+          <div>
+            <h2>Android/IOS App Design</h2>
+            <p>I design sleek, intuitive mobile apps that combine clean visuals with seamless user experience, turning ideas into apps people love to use.</p>
+              <a href="">Learn more...</a>
+          </div>
+          <div>
+            <h2>Data science</h2>
+            <p>I transform raw data into clear insights, using analytics and machine learning to help businesses make smarter, data-driven decisions. Quality work.</p>
+              <a href="">Learn more...</a>
+          </div>
+        </div>
+      </div>
+
+     </div>
+
+
+<!-- scripts -->
+    <script>
+      var tablinks=document.getElementsByClassName('tab-links');
+      var tabcontents=document.getElementsByClassName('tab-contents');
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove('active-link');
+        }
+         for(tabcontent of tabcontents){
+          tabcontent.classList.remove('active-tab');
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab"); 
+      }
+
+    </script>
+    
+</body>
+</html>
